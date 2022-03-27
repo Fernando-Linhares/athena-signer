@@ -1,9 +1,7 @@
-using System;
-using System.Collections.Generic;
-using AthenaSigner.src.utils.provider.contract;
-using System.Linq;
+namespace AthenaSigner.Source.Utils.Provider;
 
-namespace AthenaSigner.src.utils.provider;
+using System.Collections.Generic;
+using AthenaSigner.Source.Utils.Provider.Contract;
 
 public class Provider : IProvider
 {
@@ -16,7 +14,7 @@ public class Provider : IProvider
         dependency.Add(name, instance);   
     }
 
-    public object find(string name)
+    public object Find(string name)
     {
         return _dependencies[name];
     }

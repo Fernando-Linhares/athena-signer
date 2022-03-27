@@ -1,9 +1,8 @@
-using System;
-using  AthenaSigner.src.signer.contract;
+namespace AthenaSigner.Source.Signer;
 
-namespace AthenaSigner.src.signer;
+using  AthenaSigner.Source.Signer.Contract;
 
-public class Signer : ISigner
+public class SignerDocument : ISigner
 {
     public void Sign(string path, object keystore, object certificate)
     {

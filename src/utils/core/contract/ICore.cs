@@ -1,6 +1,4 @@
-using System;
-
-namespace AthenaSigner.src.utils.core.contract;
+namespace AthenaSigner.Source.Utils.Core.Contract;
 
 public interface ICore
 {

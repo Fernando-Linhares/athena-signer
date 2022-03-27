@@ -1,10 +1,10 @@
-using AthenaSigner.src.utils.core;
-using AthenaSigner.src.utils.provider;
-using AthenaSigner.src.utils.provider.contract;
-using AthenaSigner.src.signer;
-using AthenaSigner.src.signer.contract;
+namespace AthenaSigner.Source;
 
-namespace AthenaSigner.src.services;
+using AthenaSigner.Source.Utils.Core;
+using AthenaSigner.Source.Utils.Provider;
+using AthenaSigner.Source.Utils.Provider.Contract;
+using AthenaSigner.Source.Signer;
+using AthenaSigner.Source.Signer.Contract;
 
 public class Runner
 {
@@ -18,7 +18,7 @@ public class Runner
         provider   =  GetProvider();
         signer     =  GetSigner();
 
-        core       = Core.use(provider, signer);
+        core       = Core.Use(provider, signer);
 
         core.SignOrFail();
     }
@@ -34,6 +34,6 @@ public class Runner
 
     public static ISigner GetSigner()
     {
-        return new Signer();
+        return new SignerDocument();
     }
 }

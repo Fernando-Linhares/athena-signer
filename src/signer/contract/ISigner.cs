@@ -1,4 +1,4 @@
-namespace AthenaSigner.src.signer.contract;
+namespace AthenaSigner.Source.Signer.Contract;
 
 public interface ISigner
 {

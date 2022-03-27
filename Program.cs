@@ -1,7 +1,6 @@
-﻿using System;
-using AthenaSigner.src.services;
+﻿namespace AthenaSigner;
 
-namespace AthenaSigner;
+using AthenaSigner.Source;
 
 public class Program
 {

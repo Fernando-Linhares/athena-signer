@@ -1,26 +1,26 @@
-using System;
-using AthenaSigner.src.utils.provider.contract;
-using AthenaSigner.src.utils.core.contract;
-using AthenaSigner.src.signer.contract;
+namespace AthenaSigner.Source.Utils.Core;
 
-namespace AthenaSigner.src.utils.core;
+using System;
+using AthenaSigner.Source.Utils.Provider.Contract;
+using AthenaSigner.Source.Utils.Core.Contract;
+using AthenaSigner.Source.Signer.Contract;
 
 class Core : ICore
 {
-    private IProvider _provider { get; set; }
+    private IProvider _Provider { get; set; }
 
-    private ISigner _signer { get; set; }
+    private ISigner _Signer { get; set; }
 
-    public Core(IProvider provider, ISigner signer)
+    public Core(IProvider Provider, ISigner Signer)
     {
-        _provider = provider;
-        _signer   = signer;
+        _Provider = Provider;
+        _Signer   = Signer;
     }
 
-    public static Core use(IProvider provider, ISigner signer)
+    public static Core Use(IProvider Provider, ISigner Signer)
     {
-        return new Core(provider, signer);
-    } 
+        return new Core(Provider, Signer);
+    }
 
     public void SignOrFail()
     {
